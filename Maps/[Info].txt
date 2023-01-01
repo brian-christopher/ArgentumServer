@@ -1,0 +1,34 @@
+Mapa 115 116:
+Dungeon similar a veril
+Se entra por el mapa 76
+Esta poblado por orcos y orcos brujos 
+En el 116 hay 2 ogros y un belhorder
+
+Mapa70:
+Abierto en el limite izquierdo el paso al mapa 76
+
+Mapa76:
+Corregida entrada al mapa 115
+Corregido el paso al mapa 70 en el limite derecho
+
+Mapa 114:
+Corregida salida a mapa 113
+
+Mapa 8:
+Corregido salida al mapa 39 (no se podia bajar de mapa)
+
+Mapa 13:
+Corregido salida en el extremo superior derecho que llevaba de repente al oasis
+
+Mapa 35: 
+Corregido salida en el extremo superior del rio que llevaba directo a Ulla
+
+Mapa 69:
+Corregido salida en el extremo superior que devolvia al extremo inferio en ves de llevar al mapa 68
+Corregida salida que llevaba al mapa 54 en ves de al 55
+
+Mapa 38:
+Corregida la casita de loz zombies en dorck, estan bloquedas las paredes y puesto el tigger
+des layer 4, ahora la casa es normal.
+
+
