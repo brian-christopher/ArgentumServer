@@ -1408,7 +1408,6 @@ Private Sub HandleLoginNewChar(ByVal UserIndex As Integer)
     Dim UserName As String
     Dim Password As String
     Dim version As String
-    Dim skills(NUMSKILLS - 1) As Byte
     Dim race As eRaza
     Dim gender As eGenero
     Dim homeland As eCiudad
@@ -1463,25 +1462,14 @@ Private Sub HandleLoginNewChar(ByVal UserIndex As Integer)
     race = buffer.ReadByte()
     gender = buffer.ReadByte()
     Class = buffer.ReadByte()
-    Call buffer.ReadBlock(skills, NUMSKILLS)
     mail = buffer.ReadASCIIString()
     homeland = buffer.ReadByte()
 
-    #If SeguridadAlkon Then
-        If Not MD5ok(MD5) Then
-            Call WriteErrorMsg(UserIndex, "El cliente está dañado, por favor descarguelo nuevamente desde www.argentumonline.com.ar")
-        Else
-        #End If
-
-        If Not VersionOK(version) Then
-            Call WriteErrorMsg(UserIndex, "Esta version del juego es obsoleta, la version correcta es " & ULTIMAVERSION & ". La misma se encuentra disponible en www.argentumonline.com.ar")
-        Else
-            Call ConnectNewUser(UserIndex, UserName, Password, race, gender, Class, skills, mail, homeland)
-        End If
-        #If SeguridadAlkon Then
-        End If
-    #End If
-
+    If Not VersionOK(version) Then
+        Call WriteErrorMsg(UserIndex, "Esta version del juego es obsoleta, la version correcta es " & ULTIMAVERSION & ". La misma se encuentra disponible en www.argentumonline.com.ar")
+    Else
+        Call ConnectNewUser(UserIndex, UserName, Password, race, gender, Class, mail, homeland)
+    End If
     'If we got here then packet is complete, copy data back to original queue
     Call UserList(UserIndex).incomingData.CopyBuffer(buffer)
 
