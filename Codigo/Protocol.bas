@@ -1384,19 +1384,7 @@ Private Sub HandleLoginNewChar(ByVal UserIndex As Integer)
 'Author: Juan Martín Sotuyo Dodero (Maraxus)
 'Last Modification: 05/17/06
 '
-'***************************************************
-    #If SeguridadAlkon Then
-        If UserList(UserIndex).incomingData.length < 81 Then
-            Err.raise UserList(UserIndex).incomingData.NotEnoughDataErrCode
-            Exit Sub
-        End If
-    #Else
-        If UserList(UserIndex).incomingData.length < 49 Then
-            Err.raise UserList(UserIndex).incomingData.NotEnoughDataErrCode
-            Exit Sub
-        End If
-    #End If
-
+'**************************************************
     On Error GoTo Errhandler
     'This packet contains strings, make a copy of the data to prevent losses if it's not complete yet...
     Dim buffer As New clsByteQueue
