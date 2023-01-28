@@ -108,6 +108,9 @@ Errhandler:
     Call LogError("Error en Sub DoOcultarse")
 
 End Sub
+Public Sub EquiparBarca(ByVal UserIndex As Long, ByRef Barco As ObjData, ByVal Slot As Long)
+
+End Sub
 
 
 Public Sub DoNavega(ByVal UserIndex As Integer, ByRef Barco As ObjData, ByVal Slot As Integer)

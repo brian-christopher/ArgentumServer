@@ -646,7 +646,10 @@ Sub EquiparInvItem(ByVal UserIndex As Integer, ByVal Slot As Byte)
         Else
             Call WriteConsoleMsg(UserIndex, "Tu clase no puede usar este objeto.", FontTypeNames.FONTTYPE_INFO)
         End If
-
+        
+    Case eOBJType.otBarcos
+        Call EquiparBarca(UserIndex, Obj, Slot)
+         
     Case eOBJType.otFlechas
         If ClasePuedeUsarItem(UserIndex, UserList(UserIndex).Invent.Object(Slot).ObjIndex) And _
            FaccionPuedeUsarItem(UserIndex, UserList(UserIndex).Invent.Object(Slot).ObjIndex) Then
@@ -667,6 +670,27 @@ Sub EquiparInvItem(ByVal UserIndex As Integer, ByVal Slot As Byte)
             UserList(UserIndex).Invent.MunicionEqpObjIndex = UserList(UserIndex).Invent.Object(Slot).ObjIndex
             UserList(UserIndex).Invent.MunicionEqpSlot = Slot
 
+        Else
+            Call WriteConsoleMsg(UserIndex, "Tu clase no puede usar este objeto.", FontTypeNames.FONTTYPE_INFO)
+        End If
+
+    Case eOBJType.otBarcos
+        If ClasePuedeUsarItem(UserIndex, UserList(UserIndex).Invent.Object(Slot).ObjIndex) And _
+           FaccionPuedeUsarItem(UserIndex, UserList(UserIndex).Invent.Object(Slot).ObjIndex) Then
+
+            If UserList(UserIndex).Invent.Object(Slot).Equipped Then
+                'Quitamos del inv el item
+                Call Desequipar(UserIndex, Slot)
+                Exit Sub
+            End If
+
+            If UserList(UserIndex).Invent.BarcoObjIndex > 0 Then
+                Call Desequipar(UserIndex, UserList(UserIndex).Invent.BarcoObjIndex)
+            End If
+            
+            UserList(UserIndex).Invent.Object(Slot).Equipped = 1
+            UserList(UserIndex).Invent.MunicionEqpObjIndex = UserList(UserIndex).Invent.Object(Slot).ObjIndex
+            UserList(UserIndex).Invent.MunicionEqpSlot = Slot
         Else
             Call WriteConsoleMsg(UserIndex, "Tu clase no puede usar este objeto.", FontTypeNames.FONTTYPE_INFO)
         End If
