@@ -1248,13 +1248,6 @@ Public Function PuedeAtacarNPC(ByVal attackerIndex As Integer, ByVal NpcIndex As
         Exit Function
     End If
 
-    'Estas en modo Combate?
-    If Not UserList(attackerIndex).flags.ModoCombate Then
-        Call WriteConsoleMsg(attackerIndex, "Debes estar en modo de combate poder atacar al NPC.", FontTypeNames.FONTTYPE_INFO)
-        PuedeAtacarNPC = False
-        Exit Function
-    End If
-
     'Es una criatura atacable?
     If Npclist(NpcIndex).Attackable = 0 Then
         'No es una criatura atacable

@@ -1436,7 +1436,6 @@ Sub ResetUserFlags(ByVal UserIndex As Integer)
         .Hambre = 0
         .Sed = 0
         .Descansar = False
-        .ModoCombate = False
         .Vuela = 0
         .Navegando = 0
         .Oculto = 0

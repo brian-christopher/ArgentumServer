@@ -10,9 +10,9 @@ Body=48
 Arma=12
 Escudo=3
 Casco=8
-UpTime=7589
-LastIP1=127.0.0.1 - 26/1/2023:21:20:24
-Position=112-75-12
+UpTime=9453
+LastIP1=127.0.0.1 - 4/26/2023:10:02:04 PM
+Position=8-67-24
 Logged=0
 [FLAGS]
 Muerto=0
@@ -76,7 +76,7 @@ SK21=100
 [CONTACTO]
 Email=a@o.com
 [STATS]
-GLD=999761
+GLD=1001080
 BANCO=999999999
 MaxHP=366
 MinHP=366
@@ -91,12 +91,12 @@ MinAGU=100
 MaxHAM=100
 MinHAM=100
 SkillPtsLibres=235
-EXP=2678996
+EXP=2695768
 ELV=47
 ELU=81160340
 [MUERTES]
 UserMuertes=0
-NpcsMuertes=86
+NpcsMuertes=109
 [BancoInventory]
 CantidadItems=0
 Obj1=0-0
@@ -144,8 +144,8 @@ CantidadItems=9
 Obj1=404-300-1
 Obj2=356-200-1
 Obj3=559-200-1
-Obj4=36-3758-0
-Obj5=39-1854-0
+Obj4=36-3748-0
+Obj5=39-1846-0
 Obj6=414-7-0
 Obj7=3-1-0
 Obj8=405-200-1
@@ -173,9 +173,9 @@ Asesino=1000
 Bandido=0
 Burguesia=0
 Ladrones=0
-Nobles=43500
+Nobles=55000
 Plebe=30
-Promedio=7088
+Promedio=9005
 [HECHIZOS]
 H1=2
 H2=0
@@ -218,4 +218,4 @@ MAS2=0
 MAS3=0
 NroMascotas=0
 [RESEARCH]
-TrainningTime=7472
+TrainningTime=9337

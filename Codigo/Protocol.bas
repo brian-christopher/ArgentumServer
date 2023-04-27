@@ -1869,12 +1869,6 @@ Private Sub HandleAttack(ByVal UserIndex As Integer)
             Exit Sub
         End If
 
-        'If not in combat mode, can't attack
-        If Not .flags.ModoCombate Then
-            Call WriteConsoleMsg(UserIndex, "No estás en modo de combate, presiona la tecla ""C"" para pasar al modo combate.", FontTypeNames.FONTTYPE_INFO)
-            Exit Sub
-        End If
-
         'If user meditates, can't attack
         If .flags.Meditando Then
             Exit Sub
